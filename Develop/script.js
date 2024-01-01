@@ -14,7 +14,7 @@ $(document).ready(function() {
     });
   }
 
-  // Call the function to load stored values when the page loads
+  // Calls the function to load stored values when the page loads
   loadStoredValues();
 
   $(".saveBtn").on("click", function () {
@@ -24,6 +24,8 @@ $(document).ready(function() {
 
     console.log("Save button clicked!");
   });
+
+  // Changes the color of the events based on the past, present, and future
 
   $(".time-block").each(function () {
     var currentHour = dayjs().hour();
