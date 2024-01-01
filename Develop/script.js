@@ -1,45 +1,33 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-$(function () {
-  // TODO: Add a listener for click events on the save button.
-  $("btn saveBtn col-2 col-md-1").on("click", function () {
-    var timeBlockId = $(this).closest(".time-block").attr("id");
+$(document).ready(function() {
 
+  var currentDate = dayjs().format("dddd, MMMM D, YYYY");
+  $("#currentDay").text(currentDate);
+
+  $(".saveBtn").on("click", function () {
+    var timeBlockId = $(this).closest(".time-block").attr("id");
     var userInput = $(this).siblings(".description").val();
     localStorage.setItem(timeBlockId, userInput);
+
+    console.log("Save button clicked!"); // Add this line to log a message to the console
   });
 
-    // TODO: Add code to apply the past, present, or future class to each time block
+  // Applies the past, present, or future class to each time block
   $(".time-block").each(function () {
-    var currentHour = dayjs().format("H");
+    var currentHour = dayjs().hour();
     var blockHour = parseInt($(this).attr("id").split("-")[1]);
 
     if (blockHour < currentHour) {
       $(this).addClass("past");
-    } else if (blockHour == currentHour) {
+    } else if (blockHour === currentHour) {
       $(this).addClass("present");
     } else {
       $(this).addClass("future");
     }
   });
-
-  // TODO: Add code to get any user input that was saved in localStorage
-  $(".time-block").each(function () {
-    var timeBlockId = $(this).attr("id");
-    var savedInput = localStorage.getItem(timeBlockId);
-
-    if (savedInput !== null) {
-      $(this).find(".description").val(savedInput);
-    }
-  });
-
-  // TODO: Add code to display the current date in the header of the page
-  $("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY"));
 });
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
+  // local storage. HINT: What does this reference in the click listener
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
@@ -55,4 +43,3 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
