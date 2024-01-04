@@ -27,7 +27,9 @@ WHEN I refresh the page
 THEN the saved events persist
 
 ## Mock-Up
-The following image shows the appearance and functionality of the Work Day Scheduler: (./work-day-scheduler.png)
+The following image shows the appearance and functionality of the Work Day Scheduler: 
+
+!["This website displays the tasks for the work day scheduler."](./Assests/images/work-day-scheduler.png)
 
 ## Installation
 
