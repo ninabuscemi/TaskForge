@@ -31,6 +31,10 @@ The following image shows the appearance and functionality of the Work Day Sched
 
 !["This website displays the tasks for the work day scheduler."](./Assests/images/work-day-scheduler.png)
 
+## Deployed URL
+
+https://ninabuscemi.github.io/work-day-schedule/
+
 ## Installation
 
 To use the Work Day Scheduler, follow these steps:
