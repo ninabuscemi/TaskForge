@@ -23,7 +23,7 @@ This application allows you to easily plan and organize your work day by saving 
 
 The web application's appearance and functionality:
 
-![The Work Day Scheduler.](./work-day-scheduler.png)
+![The Work Day Scheduler.](./images/work-day-scheduler.png)
 
 ## Deployed Application
 
