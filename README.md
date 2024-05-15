@@ -1,7 +1,8 @@
-# Work Day Scheduler Starter Code
+# Task Forge - Work Day Scheduler
 
 ## Description
-Welcome to the Work Day Scheduler! This application allows you to easily plan and organize your work day by saving events for each hour of a typical working day (9am to 5pm). With a user-friendly interface and dynamic updates, you can stay on top of your schedule and never miss an important task.
+
+This application allows you to easily plan and organize your work day by saving events for each hour of a typical working day (9am to 5pm). With a user-friendly interface and dynamic updates, you can stay on top of your schedule and never miss an important task.
 
 ## User Story
 
